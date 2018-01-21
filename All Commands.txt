@@ -1,0 +1,13 @@
+ng new project
+
+npm install bootstrap jquery --save
+
+ng generate component navbar --spec false
+
+ng generate module app-routing --spec false --flat
+
+npm install angular2-image-upload
+
+ng g service services/profile --spec
+
+ng generate guard authguard

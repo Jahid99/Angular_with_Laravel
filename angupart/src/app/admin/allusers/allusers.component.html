@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <h2>All Users</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Blood Group</th>
+        <th>Address</th>
+        <th>Age</th>
+        <th>Photo</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.blood_group}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.age}}</td>
+        <td><img src="{{user.photo}}" height="60px" width="60px"/></td>
+        <td><button routerLink="/edit/{{user.id}}">Edit</button>  <button (click)="deleteUser(user.id)" >Delete</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
